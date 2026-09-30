@@ -1,0 +1,61 @@
+% !TEX program = xelatex
+% English resume example (fictional persona "Zhang San"; replace with your own content)
+% Compile: xelatex example-en.tex (run from this directory so common/resume.cls resolves)
+% Font preset: change the documentclass option — modern (default) / texlive / times / palatino
+\documentclass{common/resume}
+\hypersetup{
+  pdftitle={Zhang San - Resume},
+  pdfauthor={Zhang San},
+  pdfsubject={Data Analytics / Business Analytics},
+  pdfkeywords={Data Analytics, SQL, Python, A/B Testing, Business Analysis},
+  pdfcreator={XeLaTeX},
+}
+
+% ===== 黑白打印版覆盖（由 make_bw.py 自动生成，请勿手改本文件）=====
+\definecolor{Accent}{HTML}{000000}
+\definecolor{NameColor}{HTML}{000000}
+\definecolor{MutedText}{HTML}{333333}
+
+\begin{document}
+
+\resumeName{Zhang San}
+\resumeContact{Shanghai, China \quad | \quad +86-138-0000-0000 \quad | \quad zhangsan@example.com}
+
+\resumeSection{Summary}
+M.S.\ student in Data Science with two data-analytics internships. Fluent in the full SQL/Python analysis workflow, from metric definition and data preparation to insight delivery. Seeking roles in business/data analytics.
+
+\resumeSection{Education}
+\datedEntry{M.S.\ in Data Science}{Sep 2025 -- Jun 2027 (expected)}
+Linjiang University, Shanghai
+\begin{itemize}
+  \item Coursework: Statistical Learning, Data Mining, Data Visualization, Experimental Design
+  \item Thesis: churn early-warning model on user behavior sequences (AUC 0.83)
+\end{itemize}
+\datedEntry{B.S.\ in Statistics}{Sep 2021 -- Jun 2025}
+Jiangcheng University, Wuhan
+\begin{itemize}
+  \item GPA 3.6 / 4.0; First-Class University Scholarship (2023, 2024)
+\end{itemize}
+
+\resumeSection{Experience}
+\datedEntry{Data Analyst Intern, Yuntu Tech (e-commerce)}{Mar 2026 -- Aug 2026}
+\begin{itemize}
+  \item Built a 12-metric weekly reporting framework (GMV, conversion, retention); automated SQL pipelines cut report preparation from 4 hours to 30 minutes.
+  \item Designed and powered 3 A/B tests; a coupon-redesign experiment lifted order conversion by 1.8 pp ($p<0.05$).
+\end{itemize}
+\datedEntry{Research Assistant (Analytics), Baize Consulting}{Jun 2025 -- Sep 2025}
+\begin{itemize}
+  \item Cleaned and cross-analyzed 2,000+ survey responses (pandas); authored the data chapter of a 40-page industry report.
+\end{itemize}
+
+\resumeSection{Projects}
+\datedEntry{Bike-sharing Demand Forecasting (course project)}{Oct 2025 -- Jan 2026}
+\begin{itemize}
+  \item Gradient-boosted-tree model over 100K trip records; 5-fold CV MAE 2.1 vs.\ 3.4 baseline; feature-engineering code released on GitHub.
+\end{itemize}
+
+\resumeSection{Skills}
+\textbf{Data:} SQL (window functions, CTEs); Python (pandas, scikit-learn, matplotlib); Tableau; Excel (pivot tables)\par
+\textbf{Languages:} Chinese (native); English (CET-6, working proficiency)
+
+\end{document}
